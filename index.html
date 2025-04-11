@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <style>
+            @font-face {
+                src: url("./font.woff2");
+                font-family: "font";
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                display: flex;
+                height: 100vh;
+                justify-content: center;
+                align-items: center;
+                background: #202020;
+                text-rendering: optimizeSpeed;
+                -webkit-font-smoothing: none;
+                -moz-osx-font-smoothing: unset;
+            }
+
+            #canvas {
+                font-family: Courier, "Courier New", monospace;
+                font-size: 10px;
+                line-height: 6px;
+                display: inline-block;
+                color: #fff;
+            }
+
+            .info {
+                width: 195px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .info h1 {
+                font-family: "font";
+                font-size: 3rem;
+                color: #fff;
+                margin: 1px;
+            }
+			
+            .info h2 {
+                font-family: "font";
+                color: #fff;
+                margin: 1px;
+                text-align: center;
+            }
+
+            @media screen and (max-width: 980px) and (min-height: 1200px) {
+                body {
+                    flex-direction: column;
+                }
+                .info {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .info h1 {
+                    display: block;
+                    font-size: 5rem;
+                }
+                .info h2 {
+                    display: block;
+                    font-size: 2rem;
+                }
+                #canvas {
+                    max-height: 100%;
+                    font-size: large;
+                    line-height: 11px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="info">
+            <h1 id="clock"></h1>
+            <h2 id="date"></h2>
+        </div>
+        <div>
+            <pre id="canvas"></pre>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
